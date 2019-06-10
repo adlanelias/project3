@@ -1,74 +1,99 @@
 import React from "react";
-import { Segment, Comment } from "semantic-ui-react";
 import firebase from "../../firebase";
+import { Segment, Button, Input } from "semantic-ui-react";
 
-import MessagesHeader from "./MessagesHeader";
-import MessageForm from "./MessageForm";
-import Message from "./Message";
-
-class Messages extends React.Component {
+class MessageForm extends React.Component {
   state = {
-    messagesRef: firebase.database().ref("messages"),
-    messages: [],
-    messagesLoading: true,
+    message: "",
     channel: this.props.currentChannel,
-    user: this.props.currentUser
+    user: this.props.currentUser,
+    loading: false,
+    errors: []
   };
 
-  componentDidMount() {
-    const { channel, user } = this.state;
-
-    if (channel && user) {
-      this.addListeners(channel.id);
-    }
-  }
-
-  addListeners = channelId => {
-    this.addMessageListener(channelId);
+  handleChange = event => {
+    this.setState({ [event.target.name]: event.target.value });
   };
 
-  addMessageListener = channelId => {
-    let loadedMessages = [];
-    this.state.messagesRef.child(channelId).on("child_added", snap => {
-      loadedMessages.push(snap.val());
+  createMessage = () => {
+    const message = {
+      timestamp: firebase.database.ServerValue.TIMESTAMP,
+      user: {
+        id: this.state.user.uid,
+        name: this.state.user.displayName,
+        avatar: this.state.user.photoURL
+      },
+      content: this.state.message
+    };
+    return message;
+  };
+
+  sendMessage = () => {
+    const { messagesRef } = this.props;
+    const { message, channel } = this.state;
+
+    if (message) {
+      this.setState({ loading: true });
+      messagesRef
+        .child(channel.id)
+        .push()
+        .set(this.createMessage())
+        .then(() => {
+          this.setState({ loading: false, message: "", errors: [] });
+        })
+        .catch(err => {
+          console.error(err);
+          this.setState({
+            loading: false,
+            errors: this.state.errors.concat(err)
+          });
+        });
+    } else {
       this.setState({
-        messages: loadedMessages,
-        messagesLoading: false
+        errors: this.state.errors.concat({ message: "Add a message" })
       });
-    });
+    }
   };
-
-  displayMessages = messages =>
-    messages.length > 0 &&
-    messages.map(message => (
-      <Message
-        key={message.timestamp}
-        message={message}
-        user={this.state.user}
-      />
-    ));
 
   render() {
-    const { messagesRef, messages, channel, user } = this.state;
+    const { errors, message, loading } = this.state;
 
     return (
-      <React.Fragment>
-        <MessagesHeader />
-
-        <Segment>
-          <Comment.Group className="messages">
-            {this.displayMessages(messages)}
-          </Comment.Group>
-        </Segment>
-
-        <MessageForm
-          messagesRef={messagesRef}
-          currentChannel={channel}
-          currentUser={user}
+      <Segment className="message__form">
+        <Input
+          fluid
+          name="message"
+          onChange={this.handleChange}
+          value={message}
+          style={{ marginBottom: "0.7em" }}
+          label={<Button icon={"add"} />}
+          labelPosition="left"
+          className={
+            errors.some(error => error.message.includes("message"))
+              ? "error"
+              : ""
+          }
+          placeholder="Write your message"
         />
-      </React.Fragment>
+        <Button.Group icon widths="2">
+          <Button
+            onClick={this.sendMessage}
+            disabled={loading}
+            color="orange"
+            content="Add Reply"
+            labelPosition="left"
+            icon="edit"
+          />
+          <Button
+            color="teal"
+            content="Upload Media"
+            labelPosition="right"
+            icon="cloud upload"
+          />
+        </Button.Group>
+      </Segment>
     );
   }
 }
 
-export default Messages;
+export default MessageForm;
