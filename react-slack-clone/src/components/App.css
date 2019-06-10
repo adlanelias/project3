@@ -182,16 +182,3 @@ body,
   left: 40px;
   right: 20px;
 }
-
-#poggers {
-  height: 100px;
-  width: 100px;
-}
-
-#channelstart {
-  height: 15px;
-  width: 15px;
-  display: inline-block;
-  margin-bottom: 1px;
-  margin-right: 5px;
-}

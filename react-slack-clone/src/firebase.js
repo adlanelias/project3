@@ -4,13 +4,13 @@ import "firebase/database";
 import "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAE1NRrCWD1Yk5VaT1-MMI1UQMsMut6014",
-  authDomain: "react-slack-clone-939cf.firebaseapp.com",
-  databaseURL: "https://react-slack-clone-939cf.firebaseio.com",
-  projectId: "react-slack-clone-939cf",
-  storageBucket: "react-slack-clone-939cf.appspot.com",
-  messagingSenderId: "66014167072",
-  appId: "1:66014167072:web:a384c3dd3586ae5a"
+  apiKey: "AIzaSyDUR3BypIdBD2mWCPIAudtPPEGbrDdzP9M",
+  authDomain: "pogchat7.firebaseapp.com",
+  databaseURL: "https://pogchat7.firebaseio.com",
+  projectId: "pogchat7",
+  storageBucket: "pogchat7.appspot.com",
+  messagingSenderId: "697933165914",
+  appId: "1:697933165914:web:1ad7ee88752310a7"
 };
 firebase.initializeApp(firebaseConfig);
 

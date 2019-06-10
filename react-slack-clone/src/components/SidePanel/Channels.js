@@ -3,7 +3,7 @@ import firebase from "../../firebase";
 import { connect } from "react-redux";
 import { setCurrentChannel, setPrivateChannel } from "../../actions";
 // prettier-ignore
-import { Menu, Icon, Modal, Form, Input, Button, Label, Image } from "semantic-ui-react";
+import { Menu, Icon, Modal, Form, Input, Button, Label } from "semantic-ui-react";
 
 class Channels extends React.Component {
   state = {
@@ -188,11 +188,10 @@ class Channels extends React.Component {
         style={{ opacity: 0.7 }}
         active={channel.id === this.state.activeChannel}
       >
-
         {this.getNotificationCount(channel) && (
           <Label color="red">{this.getNotificationCount(channel)}</Label>
         )}
-        <p>         <Image id="channelstart" src="https://www.nicepng.com/png/full/12-125453_pogchamp-biblethump-co-bedeutung-pogchamp-emote.png" />{channel.name}</p>
+        # {channel.name}
       </Menu.Item>
     ));
 
