@@ -9,13 +9,21 @@ PogChat currently only works on web browsers, so you'll only need a computer in 
 ## Screenshots
 
 ### Login Page
+
 <img width="1440" alt="Screenshot 2019-06-11 at 7 07 09 AM" src="https://user-images.githubusercontent.com/47695717/59227455-bf69da80-8c18-11e9-8a23-1b7792b30b44.png">
+
 ### Register
+
 <img width="1440" alt="Screenshot 2019-06-11 at 7 07 20 AM" src="https://user-images.githubusercontent.com/47695717/59227473-c98bd900-8c18-11e9-9943-330ef73e6801.png">
+
 ### Dashboard and Navigation page
+
 <img width="1440" alt="Screenshot 2019-06-11 at 7 07 42 AM" src="https://user-images.githubusercontent.com/47695717/59227486-d3add780-8c18-11e9-85bb-ec73bdd5571f.png">
+
 ### Image Upload
-<img width="1440" alt="Screenshot 2019-06-11 at 7 09 21 AM" src="https://user-images.githubusercontent.com/47695717/59227514-de686c80-8c18-11e9-8273-1962dc1bbc17.png"><img width="1440" alt="Screenshot 2019-06-11 at 7 09 35 AM" src="https://user-images.githubusercontent.com/47695717/59227528-e58f7a80-8c18-11e9-861e-c79fb1a3da52.png">
+
+<img width="1440" alt="Screenshot 2019-06-11 at 7 09 21 AM" src="https://user-images.githubusercontent.com/47695717/59227514-de686c80-8c18-11e9-8273-1962dc1bbc17.png">
+
 ### Colour Scheme Picker
 <img width="1440" alt="Screenshot 2019-06-11 at 7 09 35 AM" src="https://user-images.githubusercontent.com/47695717/59227528-e58f7a80-8c18-11e9-861e-c79fb1a3da52.png">
 
