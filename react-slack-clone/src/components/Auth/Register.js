@@ -11,6 +11,7 @@ import {
   Icon, Image
 } from "semantic-ui-react";
 import { Link } from "react-router-dom";
+import myImage from "../../images/pogchamp.png";
 
 class Register extends React.Component {
   state = {
@@ -132,7 +133,7 @@ class Register extends React.Component {
       <Grid textAlign="center" verticalAlign="middle" className="app">
         <Grid.Column style={{ maxWidth: 450 }}>
           <Header as="h1" icon color="blue" textAlign="center">
-            <Image id="poggers" src="https://www.nicepng.com/png/full/12-125453_pogchamp-biblethump-co-bedeutung-pogchamp-emote.png" /><br></br>
+            <Image id="poggers" src={myImage} /><br></br>
             Register for PogChat
           </Header>
           <Form onSubmit={this.handleSubmit} size="large">

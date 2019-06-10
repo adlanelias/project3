@@ -11,6 +11,7 @@ import {
 } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
+import myImage from "../../images/pogchamp.png";
 
 class Login extends React.Component {
   state = {
@@ -19,6 +20,7 @@ class Login extends React.Component {
     errors: [],
     loading: false
   };
+
 
   displayErrors = errors =>
     errors.map((error, i) => <p key={i}>{error.message}</p>);
@@ -62,7 +64,7 @@ class Login extends React.Component {
       <Grid textAlign="center" verticalAlign="middle" className="app">
         <Grid.Column style={{ maxWidth: 450 }}>
           <Header as="h1" icon color="blue" textAlign="center">
-            <Image id="poggers" src="https://www.nicepng.com/png/full/12-125453_pogchamp-biblethump-co-bedeutung-pogchamp-emote.png" /><br>
+            <Image id="poggers" src={myImage} /><br>
             </br>
             Login to PogChat
           </Header>

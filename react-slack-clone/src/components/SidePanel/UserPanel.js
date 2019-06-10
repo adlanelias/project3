@@ -3,6 +3,7 @@ import firebase from "../../firebase";
 import AvatarEditor from "react-avatar-editor";
 // prettier-ignore
 import { Grid, Header, Icon, Dropdown, Image, Modal, Input, Button } from "semantic-ui-react";
+import myImage from "../../images/pogchamp.png";
 
 class UserPanel extends React.Component {
   state = {
@@ -124,7 +125,7 @@ class UserPanel extends React.Component {
           <Grid.Row style={{ padding: "1.2em", margin: 0 }}>
             {/* App Header */}
             <Header inverted floated="left" as="h2">
-              <Image src="https://www.nicepng.com/png/full/12-125453_pogchamp-biblethump-co-bedeutung-pogchamp-emote.png" />
+              <Image src={myImage} />
               <Header.Content>PogChat</Header.Content>
             </Header>
 

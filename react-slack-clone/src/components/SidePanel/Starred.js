@@ -3,6 +3,7 @@ import firebase from "../../firebase";
 import { connect } from "react-redux";
 import { setCurrentChannel, setPrivateChannel } from "../../actions";
 import { Menu, Icon, Image } from "semantic-ui-react";
+import myImage from "../../images/pogchamp.png";
 
 class Starred extends React.Component {
   state = {
@@ -69,7 +70,7 @@ class Starred extends React.Component {
         style={{ opacity: 0.7 }}
         active={channel.id === this.state.activeChannel}
       >
-        <Image id="channelstart" src="https://www.nicepng.com/png/full/12-125453_pogchamp-biblethump-co-bedeutung-pogchamp-emote.png" />{channel.name}
+        <Image id="channelstart" src={myImage} />{channel.name}
       </Menu.Item>
     ));
 

@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { setCurrentChannel, setPrivateChannel } from "../../actions";
 // prettier-ignore
 import { Menu, Icon, Modal, Form, Input, Button, Label, Image } from "semantic-ui-react";
+import myImage from "../../images/pogchamp.png";
 
 class Channels extends React.Component {
   state = {
@@ -192,7 +193,7 @@ class Channels extends React.Component {
         {this.getNotificationCount(channel) && (
           <Label color="red">{this.getNotificationCount(channel)}</Label>
         )}
-        <p>         <Image id="channelstart" src="https://www.nicepng.com/png/full/12-125453_pogchamp-biblethump-co-bedeutung-pogchamp-emote.png" />{channel.name}</p>
+        <p>         <Image id="channelstart" src={myImage} />{channel.name}</p>
       </Menu.Item>
     ));
 
