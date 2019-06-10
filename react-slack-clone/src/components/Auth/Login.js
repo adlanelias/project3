@@ -7,9 +7,10 @@ import {
   Button,
   Header,
   Message,
-  Icon
+  Icon, Image
 } from "semantic-ui-react";
 import { Link } from "react-router-dom";
+
 
 class Login extends React.Component {
   state = {
@@ -61,7 +62,8 @@ class Login extends React.Component {
       <Grid textAlign="center" verticalAlign="middle" className="app">
         <Grid.Column style={{ maxWidth: 450 }}>
           <Header as="h1" icon color="blue" textAlign="center">
-            <Icon name="chess king" color="blue" />
+            <Image id="poggers" src="https://www.nicepng.com/png/full/12-125453_pogchamp-biblethump-co-bedeutung-pogchamp-emote.png" /><br>
+            </br>
             Login to PogChat
           </Header>
           <Form onSubmit={this.handleSubmit} size="large">
