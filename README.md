@@ -1,10 +1,23 @@
 # Project3 - PogChat
-PogChat is an app that is inspired by Slack and Discord that I made in order to learn about realtime chat.
+PogChat is an app created for General Assembly final project that is inspired by Slack and Discord in order to learn about realtime chat.
 
 ## Getting Started
 Head over to this link to test out the live version: https://pogchat7.firebaseapp.com/
 
 PogChat currently only works on web browsers, so you'll only need a computer in order to have access to the app.
+
+## Screenshots
+
+### Login Page
+
+### Register
+
+### Dashboard and Navigation page
+
+### Image Upload
+
+### Colour Scheme Picker
+
 
 ## Current features
 * Authenticated users
