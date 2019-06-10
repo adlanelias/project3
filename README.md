@@ -9,15 +9,15 @@ PogChat currently only works on web browsers, so you'll only need a computer in 
 ## Screenshots
 
 ### Login Page
-file:///Users/adlanelias/Desktop/Screenshot%202019-06-11%20at%207.07.09%20AM.png
+
 ### Register
-file:///Users/adlanelias/Desktop/Screenshot%202019-06-11%20at%207.07.20%20AM.png
+
 ### Dashboard and Navigation page
-file:///Users/adlanelias/Desktop/Screenshot%202019-06-11%20at%207.07.42%20AM.png
+
 ### Image Upload
-file:///Users/adlanelias/Desktop/Screenshot%202019-06-11%20at%207.09.21%20AM.png
+
 ### Colour Scheme Picker
-file:///Users/adlanelias/Desktop/Screenshot%202019-06-11%20at%207.09.35%20AM.png
+
 
 ## Current features
 * Authenticated users
